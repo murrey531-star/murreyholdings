@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Murrey Holdings | Clothing Supplies</title>
+<meta name="description" content="Murrey Holdings supplies quality clothing for individuals, businesses, institutions and bulk buyers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--dark:#111318;--muted:#666b73;--light:#f6f6f3;--accent:#c89b3c;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;color:var(--dark);background:#fff;line-height:1.6}
+.container{width:min(1120px,92%);margin:auto}
+header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);z-index:10;border-bottom:1px solid #eee}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;font-size:1.25rem;letter-spacing:-.5px}
+.logo span{color:var(--accent)}
+nav a{color:var(--dark);text-decoration:none;margin-left:28px;font-size:.92rem;font-weight:600}
+nav a:hover{color:var(--accent)}
+.hero{padding:150px 0 90px;background:linear-gradient(120deg,#f7f5ef 0%,#fff 55%,#ece9e1 100%);min-height:680px;display:flex;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:.75rem;font-weight:800;color:var(--accent);margin-bottom:18px}
+h1{font-size:clamp(3rem,6vw,5.5rem);line-height:.98;letter-spacing:-4px;margin-bottom:24px}
+.hero p{font-size:1.08rem;color:var(--muted);max-width:600px;margin-bottom:32px}
+.buttons{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;padding:14px 22px;border-radius:8px;font-weight:700;transition:.2s}
+.btn-primary{background:var(--dark);color:#fff}
+.btn-primary:hover{transform:translateY(-2px);background:#2a2d34}
+.btn-outline{border:1px solid #bbb;color:var(--dark)}
+.btn-outline:hover{border-color:var(--dark)}
+.hero-card{height:430px;border-radius:24px;background:linear-gradient(145deg,#17181c,#3a3b3f);display:flex;align-items:flex-end;padding:28px;box-shadow:0 25px 60px rgba(0,0,0,.15);position:relative;overflow:hidden}
+.hero-card:before{content:"";position:absolute;width:280px;height:360px;border-radius:45% 45% 20% 20%;background:linear-gradient(160deg,#e9e4d8,#9c8e72);left:50%;top:20px;transform:translateX(-50%) rotate(5deg);opacity:.9}
+.hero-card:after{content:"MURREY";position:absolute;top:30px;left:30px;color:#fff;font-weight:800;letter-spacing:5px}
+.card-label{position:relative;z-index:1;color:#fff}
+.card-label strong{display:block;font-size:1.6rem}
+section{padding:95px 0}
+.section-head{max-width:650px;margin-bottom:45px}
+.section-head h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-1.5px;line-height:1.1;margin-bottom:14px}
+.section-head p{color:var(--muted)}
+.about{background:var(--light)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.about h3{font-size:1.6rem;margin-bottom:15px}
+.about p{color:var(--muted);margin-bottom:16px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.stat{background:#fff;padding:28px;border-radius:14px;border:1px solid #e8e8e8}
+.stat b{font-size:2rem;display:block}.stat span{color:var(--muted);font-size:.9rem}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service{padding:30px;border:1px solid #e6e6e6;border-radius:16px;transition:.25s}
+.service:hover{transform:translateY(-5px);box-shadow:0 15px 35px rgba(0,0,0,.07)}
+.icon{width:46px;height:46px;border-radius:12px;background:#f1eadb;color:#8a6723;display:grid;place-items:center;font-weight:800;margin-bottom:22px}
+.service h3{margin-bottom:10px}.service p{color:var(--muted);font-size:.95rem}
+.contact{background:var(--dark);color:#fff}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}
+.contact p{color:#b9bbc0}
+.contact-list{margin-top:28px;display:grid;gap:16px}
+.contact-item strong{display:block;color:#fff}.contact-item span{color:#b9bbc0}
+form{background:#fff;padding:28px;border-radius:16px;color:var(--dark)}
+input,textarea{width:100%;padding:14px;border:1px solid #ddd;border-radius:8px;font:inherit;margin-bottom:14px}
+textarea{min-height:130px;resize:vertical}
+form .btn{border:0;cursor:pointer;width:100%}
+footer{padding:28px 0;background:#0b0c0f;color:#8e9198;text-align:center;font-size:.85rem}
+@media(max-width:800px){
+nav{display:none}.hero{padding-top:125px}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+.hero-card{height:330px}.services-grid{grid-template-columns:1fr}
+h1{letter-spacing:-2px}.contact-grid{gap:40px}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container nav">
+<div class="logo">MURREY <span>HOLDINGS</span></div>
+<nav>
+<a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">Clothing Supply & Distribution</div>
+<h1>Quality clothing. Reliable supply.</h1>
+<p>Murrey Holdings provides dependable clothing supply solutions for individuals, businesses, institutions and bulk buyers.</p>
+<div class="buttons">
+<a class="btn btn-primary" href="#contact">Request a Quote</a>
+<a class="btn btn-outline" href="#services">Explore Services</a>
+</div>
+</div>
+<div class="hero-card"><div class="card-label"><strong>Built for every wardrobe.</strong>Quality • Value • Reliability</div></div>
+</div>
+</section>
+
+<section id="about" class="about">
+<div class="container about-grid">
+<div>
+<div class="eyebrow">About Us</div>
+<h2>We make clothing supply simple.</h2>
+<p>Murrey Holdings is a modern clothing supply business focused on providing quality apparel and dependable service to customers who need individual pieces or larger quantities.</p>
+<p>We aim to build long-term relationships through consistent quality, competitive pricing and professional customer service.</p>
+</div>
+<div class="stats">
+<div class="stat"><b>01</b><span>Quality-focused sourcing</span></div>
+<div class="stat"><b>02</b><span>Flexible bulk orders</span></div>
+<div class="stat"><b>03</b><span>Reliable service</span></div>
+<div class="stat"><b>04</b><span>Customer-first approach</span></div>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">What We Do</div>
+<h2>Clothing solutions for every need.</h2>
+<p>From individual orders to large-scale supply, we help customers find and source clothing efficiently.</p>
+</div>
+<div class="services-grid">
+<div class="service"><div class="icon">01</div><h3>Wholesale Supply</h3><p>Clothing supply for retailers, resellers and customers purchasing in larger quantities.</p></div>
+<div class="service"><div class="icon">02</div><h3>Bulk Orders</h3><p>Flexible sourcing for events, groups, organizations and other bulk clothing requirements.</p></div>
+<div class="service"><div class="icon">03</div><h3>Corporate & Workwear</h3><p>Clothing solutions suitable for teams, businesses and institutional needs.</p></div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<div class="container contact-grid">
+<div>
+<div class="eyebrow">Get In Touch</div>
+<h2>Let's talk about your clothing needs.</h2>
+<p>Contact Murrey Holdings for product enquiries, bulk orders and supply requests.</p>
+<div class="contact-list">
+<div class="contact-item"><strong>Phone</strong><span>+254717458900</span></div>
+<div class="contact-item"><strong>Email</strong><span>info@murrey531@gmail.com</span></div>
+<div class="contact-item"><strong>Location</strong><span>Kenya</span></div>
+</div>
+</div>
+<form onsubmit="sendMessage(event)">
+<input id="name" placeholder="Your name" required>
+<input id="email" type="email" placeholder="Email address" required>
+<textarea id="message" placeholder="Tell us what clothing you need..." required></textarea>
+<button class="btn btn-primary" type="submit">Send Enquiry</button>
+</form>
+</div>
+</section>
+</main>
+
+<footer>© 2026 Murrey Holdings. All rights reserved.</footer>
+<script>
+function sendMessage(e){
+ e.preventDefault();
+ const name=document.getElementById('name').value;
+ alert('Thank you, '+name+'! Your enquiry form is ready to connect to your email or WhatsApp.');
+}
+</script>
+</body>
+</html>
